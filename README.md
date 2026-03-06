@@ -2,7 +2,7 @@
 
 Predictive edge-swipe back interaction for Expo and bare React Native.
 
-The component stays invisible until the user starts dragging from the screen edge, then reveals a predictive back anchor inspired by the Nothing Phone style of visual feedback.
+The component stays invisible until the user starts dragging from the screen edge, then reveals a predictive back anchor inspired by the Nothing Phone 3a style of visual feedback.
 
 ## Features
 
