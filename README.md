@@ -191,9 +191,7 @@ This repo includes unit tests for the pure drag-threshold helpers. Gesture behav
 
 ## Example
 
-Demo video:
-
-<video src="./demo/demo.mov" controls muted playsinline width="320"></video>
+![Demo](./demo/demo.gif)
 
 The example app currently demonstrates:
 
