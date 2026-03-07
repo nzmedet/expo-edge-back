@@ -35,8 +35,8 @@ const screens = [
   },
   {
     title: 'Audio Settings',
-    eyebrow: 'Haptics fire later',
-    body: 'The drag haptic does not trigger at touch start. It only fires after the pull travels far enough to feel intentional.',
+    eyebrow: 'Haptics fire early',
+    body: 'The drag haptic now fires as soon as the anchor reveals, so users immediately feel that the edge gesture has started.',
     accent: '#0fa47a',
   },
 ];
@@ -85,7 +85,7 @@ export default function App() {
         <SafeAreaView style={styles.safeArea}>
           <StatusBar barStyle="light-content" />
           <EdgeBackGestureView
-            activationDistance={124}
+            activationDistance={100}
             anchorBackgroundColor={currentScreen.accent}
             contentEffect={contentEffect}
             dimMaxOpacity={0.18}
@@ -105,7 +105,7 @@ export default function App() {
               }
             }}
             renderOverlay={(props) => <RecordingTouchIndicator {...props} />}
-            revealDistance={88}
+            revealDistance={58}
           >
             <View style={styles.background}>
               <View style={styles.hero}>

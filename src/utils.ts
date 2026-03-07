@@ -36,5 +36,5 @@ export function getDragHapticDistance(
     return dragHapticDistance;
   }
 
-  return activationDistance * 0.72;
+  return Math.min(14, activationDistance);
 }

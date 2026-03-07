@@ -114,7 +114,7 @@ import * as Haptics from 'expo-haptics';
 />;
 ```
 
-The drag haptic is intentionally meant for a later point in the pull, not the initial touch-down.
+The drag haptic is intended as an early edge-gesture confirmation, so it fires when the anchor first reveals rather than near the commit point.
 
 ## Custom Anchor
 
@@ -172,7 +172,7 @@ function TouchOverlay({ isVisible, touchX, touchY }) {
 | `edgeWidth`             | `number`                        | `24`                        | Edge activation width                                           |
 | `revealDistance`        | `number`                        | `96`                        | Distance used to complete the anchor reveal                     |
 | `activationDistance`    | `number`                        | `132`                       | Release threshold for `onBack`                                  |
-| `dragHapticDistance`    | `number`                        | `activationDistance * 0.72` | Distance before drag haptic fires                               |
+| `dragHapticDistance`    | `number`                        | `14`                        | Distance before drag haptic fires                               |
 | `maxDragDistance`       | `number`                        | `180`                       | Clamp for drag distance                                         |
 | `anchorSize`            | `number`                        | `56`                        | Default anchor size                                             |
 | `anchorColor`           | `string`                        | `#f8f8f5`                   | Arrow color                                                     |
@@ -198,7 +198,7 @@ The example app currently demonstrates:
 - left and right edge predictive back
 - custom morphing anchor
 - optional dim/scale content effects
-- late drag haptics
+- early drag haptics
 - a recording-friendly touch indicator overlay
 
 Run the demo app from the workspace:

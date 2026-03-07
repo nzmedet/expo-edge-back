@@ -24,8 +24,9 @@ describe('edge back helpers', () => {
     expect(shouldTriggerBack(132, 132)).toBe(true);
   });
 
-  it('defaults the drag haptic to a later threshold', () => {
-    expect(getDragHapticDistance(100)).toBe(72);
+  it('defaults the drag haptic to the initial reveal threshold', () => {
+    expect(getDragHapticDistance(100)).toBe(14);
+    expect(getDragHapticDistance(10)).toBe(10);
     expect(getDragHapticDistance(100, 84)).toBe(84);
   });
 });
